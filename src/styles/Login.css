@@ -1,0 +1,59 @@
+.Cajas{
+  display: flex;
+  width: 90%;
+  height: 33vw;
+  margin: 2vw 5vw;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+.Cajas div:not(.fila,.click){
+  margin: 1vw;
+  width: 40%;
+  height: 28vw;
+}
+.photo{
+  display: flex;
+  justify-content: center;
+  background: #0854C5;
+  padding: 0;
+  border-radius: 10px;
+}
+.photo img{
+  width: 30vw;
+}
+/* --------------------------------------------- */
+.Datos{
+  width: 30vw;
+  padding-top: 10vw;
+}
+.fila{
+  /* padding-left: 6vw;
+  padding-top: 2vw; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 3vh;
+  color: white;
+  margin-bottom: 3vh;
+  padding: 0 2vw 0 2vw ;
+}
+.click{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: solid  red;
+	background: #FF006E;
+	color: white;
+	height: 20px;
+	border-radius: 4vw;
+	padding: 2vh 5vw;
+	margin: 5vw 11vw;
+}
+.fila input{
+  width: 25vw;
+  height: 5vh;
+  padding: 1vw;
+  border: none;
+  border-radius: 7px;
+}
