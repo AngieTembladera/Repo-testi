@@ -10,9 +10,9 @@ export function MyRoutes() {
     <BrowserRouter>
     <Routes>
         <Route path="/" element={<Home/>}/>
-        <Route path="/pagina2" element={<Login/>}/>
-        <Route path="/pagina3" element={<Departamentos/>}/>
-        <Route path="/pagina4" element={<Register/>}/>
+        <Route path="/login" element={<Login/>}/>
+        <Route path="/home" element={<Departamentos/>}/>
+        <Route path="/register" element={<Register/>}/>
     </Routes>
     </BrowserRouter>
   );

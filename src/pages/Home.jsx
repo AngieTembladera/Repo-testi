@@ -17,8 +17,8 @@ export function Home() {
         </div>
       </div>
       <div id="Eleccion" className="picture">
-        <p className="student"><a href="/Pagina2">Alumno</a></p>
-        <p className="teacher"><a href="/Pagina4">Profesor</a></p>
+        <p className="student"><a href="/login">Alumno</a></p>
+        <p className="teacher"><a href="/login">Profesor</a></p>
         </div>
     </div>
   );
