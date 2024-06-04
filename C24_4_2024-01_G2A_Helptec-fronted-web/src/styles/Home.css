@@ -1,0 +1,68 @@
+.centro{
+  display: flex;
+  flex-direction: column;
+  margin: 4vw 25vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.uno{
+  align-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  padding-left: 2vw;
+  text-align: center;
+  width: 70vw;
+  border-radius: 25px;
+  height: 29vw;
+  background-image: url(../assets/img/tecsup.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.one-dos{
+  align-content: center;
+  font-weight: bold;
+  font-size: 2rem;
+  color: black;
+  padding-left: 2vw;
+  text-align: center;
+  margin: 4vw;
+  width: 50vw;
+  border-radius: 25px;
+  height: 29vw;
+  background-color: #9FCCDF;
+}
+
+.centro img{
+  background-color: white;
+  padding: 0.2vw;
+}
+.footer{
+  width: 100%;
+}
+
+.picture{
+  background-image: url(../assets/img/section2.png);
+  width: 100%;
+  height: 38vw;
+}
+.picture {
+  display: flex;
+  flex-direction: row; /* Apila los elementos verticalmente */
+  justify-content: center; /* Centra verticalmente */
+  align-items: center; /* Centra horizontalmente */
+  border: 1px solid black; /* Solo para visualización */
+}
+.picture p{
+  margin: 11vw;
+  padding: 1vw 4vw;
+  border-radius: 8px;
+  font-size: 2rem;
+}
+.student{
+  background-color: #FF0404;
+}
+.teacher{
+  background-color: #19ABCB;
+}
