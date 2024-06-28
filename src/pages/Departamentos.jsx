@@ -1,8 +1,6 @@
 import "../styles/Departamentos.css"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
-
 import { Navbar3 } from "../components/navegador3/Navbar3";
+
 export function Departamentos() {
   return (
     <div>
@@ -11,15 +9,15 @@ export function Departamentos() {
       <div id="carouselExampleControls" className="carousel slide" data-bs-ride="carousel">
       <div className="carousel-inner">
         <div className="carousel-item active">
-          <a href="#lalla">Tecnología Digital</a>
+          <a href="/cursos">Tecnología Digital</a>
           <img src={require("../assets/img/imagenSoftware.jpg")} className="d-block tamaño " alt="Slide 1" />
         </div>
         <div className="carousel-item">
-        <a href="#lalla">Mecánica y Aviación</a>
+        <a href="/cursos">Mecánica y Aviación</a>
           <img src={require("../assets/img/maquinariaPesada.png")} className="d-block tamaño" alt="Slide 2" />
         </div>
         <div className="carousel-item">
-        <a href="#lalla">Minería, Procesos Químicos y Metalúrgicos</a>
+        <a href="/cursos">Minería, Procesos Químicos y Metalúrgicos</a>
           <img src={require("../assets/img/procesosQuimicos.png")} className="d-block tamaño" alt="Slide 3" />
         </div>
       </div>

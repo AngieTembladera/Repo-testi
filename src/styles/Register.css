@@ -3,10 +3,12 @@
   margin: 1vh;
   height: 74vh;
 }
+
 .cuadrados>div{
   width: 45%;
-  margin: 5vh;
+  margin: 1vh;
 }
+
 /* imagen inicio*/
 .contaner {
   display: flex;
@@ -14,9 +16,10 @@
   justify-content: center;
 }
 
-.circle {
+.circle{
   width: 30vw;
-  height: 56vh;
+  height: 66vh;
+  border: solid 1vw;
   border-radius: 50%;
   background-color: #e5e7e5;
   background-image: url(../assets/img/Vector.png);
@@ -24,10 +27,12 @@
   background-position: center; /* Centrar la imagen horizontal y verticalmente */
   background-repeat: no-repeat;
   position: relative;
+  overflow: hidden; /* Asegura que la imagen no se salga del círculo */
 }
+
 .send-button {
   position: absolute;
-  bottom: 11px;
+  bottom: 6vh;
   right: 11px;
   width: 6vw;
   height: 11vh;
@@ -36,26 +41,37 @@
   padding: 0;
   color: white;
   cursor: pointer;
+  z-index: 1; /* Asegura que el botón esté encima de la imagen */
 }
 
 .send-button:hover {
   background-color: #45a049;
 }
+
+.uploaded-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para que cubra el área del círculo */
+  border-radius: 50%; /* Asegura que la imagen tenga bordes redondeados */
+}
+
 /* imagen cierre */
 .form-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
   margin-top: 50px;
 }
 
 .input-field {
   flex-basis: calc(40% - 10px);
   margin: 10px;
-  width: 26vw;
-  padding: 5px;
+  /* padding-left: 5vw; */
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 25px;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -68,4 +84,39 @@
 .input-field::placeholder {
   color: #999;
   font-size: 14px;
+}
+/* boton para enviar los datos */
+.boton{
+  display: flex;
+  justify-content: center;
+}
+.boton> button{
+  border: solid #FF006E;
+  border-radius: 4vw;
+  padding: 2px 15vw;
+  background: #FF006E;
+  position: relative;
+  bottom: 7vh;
+}
+/* estilos para agregar iconos a los inputs */
+.input-container {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.input-container input {
+  width: 39vw;
+  padding: 10px 10px 10px 40px; /* Espacio para el icono */
+  box-sizing: border-box;
+}
+
+.input-container img {
+  position: absolute;
+  top: 30%;
+  left: 20px;
+  transform: translateY(-50%);
+  width: 20px; /* Ajusta según el tamaño del icono */
+  height: 20px; /* Ajusta según el tamaño del icono */
+  pointer-events: none; /* Para que no interfiera con la interacción del input */
 }

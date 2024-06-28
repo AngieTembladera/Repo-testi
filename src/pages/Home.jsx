@@ -3,7 +3,7 @@ import "../styles/Home.css";
 export function Home() {
   return (
     <div>
-      <Navbar1 />
+      <Navbar1/>
       <div className="centro">
         <div className="uno">
           <p>
@@ -17,8 +17,8 @@ export function Home() {
         </div>
       </div>
       <div id="Eleccion" className="picture">
-        <p className="student"><a href="/login">Alumno</a></p>
-        <p className="teacher"><a href="/login">Profesor</a></p>
+        <p className="student"><a href="#">Alumno</a></p>
+        <p className="teacher"><a href="#">Profesor</a></p>
         </div>
     </div>
   );

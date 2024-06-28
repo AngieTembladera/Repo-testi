@@ -39,6 +39,7 @@ export function Login() {
             alt=""
           ></img>
         </div>
+          {/* ---------------------- */}
         <div class="Datos">
           <form onSubmit={login}>
             
@@ -50,20 +51,20 @@ export function Login() {
             <span>Contraseña:</span>
             <input type="password" id="password" name="password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
           </div>
-          <div class="fila">
-            <p>Continuar con Google</p>
+          <div class="fila extra">
+            <p><img className="Google"
+            src={require("../assets/img/google.png")}
+            alt=""
+          ></img>Continuar con Google</p>
             <p>Olvidé mi contraseña</p>
           </div>
           {error & <p style={{color: 'red'}}>{error}</p>}
-          <div>
-            <button type="submit" class="click">Ingresar</button>
-          </div>
+            <button type="submit" class="click"><a href="/home">Ingresar</a></button>
           </form>
         </div>
 
         {/* --------------------------------- */}
       </div>
-      <Link to={"/"}>Ir pagina 1</Link>
     </div>
   );
 }

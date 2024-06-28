@@ -1,0 +1,14 @@
+.Cursos{
+  display: flex;
+  justify-content: center;
+  margin-top: 2vw ;
+}
+table{
+  background: white;
+  width:100%;
+  display: flex;
+  justify-content: center;
+}
+td{
+  padding: 2vh 4vw;
+}
