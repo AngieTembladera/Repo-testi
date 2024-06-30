@@ -1,17 +1,26 @@
-import "./Navbar1.css"
+import "./Navbar1.css";
 
-export function Navbar1(){
+export function Navbar1({ onModeChange }) {
   return (
     <div>
-       <nav>
-        
+      <nav>
         <ul>
-        <img src={require("../../assets/img/logo-helptec-removebg-preview.png")} alt=""></img>
-        <li><button className="boton2"><a href="#Eleccion">Resgistrarse</a></button></li>
-        <li><button className="boton1"><a href="#Eleccion">Iniciar Sesión</a></button></li>
-        <li><button className="no">Conocenos</button></li>
+          <img src={require("../../assets/img/logo-helptec-removebg-preview.png")} alt="logo" />
+          <li>
+            <button className="boton2" onClick={() => onModeChange('register')}>
+              Registrarse
+            </button>
+          </li>
+          <li>
+            <button className="boton1" onClick={() => onModeChange('login')}>
+              Iniciar Sesión
+            </button>
+          </li>
+          <li>
+            <button className="no">Conócenos</button>
+          </li>
         </ul>
-       </nav>
+      </nav>
     </div>
-  )
+  );
 }

@@ -1,68 +1,58 @@
-.centro{
+body {
+  font-family: Arial, sans-serif;
+  background-color: #eaf2f8;
+}
+
+.banner-section {
+  margin-top: 5vh;
+  position: relative;
   display: flex;
-  flex-direction: column;
-  margin: 4vw 25vw;
   justify-content: center;
-  align-items: center;
 }
 
-.uno{
-  align-content: center;
-  font-weight: bold;
-  font-size: 2rem;
-  color: black;
-  padding-left: 2vw;
+.banner-section img {
+  width: 60%;
+  height: 70vh;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
   text-align: center;
-  width: 70vw;
-  border-radius: 25px;
-  height: 29vw;
-  background-image: url(../assets/img/tecsup.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.one-dos{
-  align-content: center;
-  font-weight: bold;
-  font-size: 2rem;
-  color: black;
-  padding-left: 2vw;
-  text-align: center;
-  margin: 4vw;
-  width: 50vw;
-  border-radius: 25px;
-  height: 29vw;
-  background-color: #9FCCDF;
+  text-shadow: 2px 2px 4px #000;
 }
 
-.centro img{
-  background-color: white;
-  padding: 0.2vw;
-}
-.footer{
-  width: 100%;
+.banner-text h1 {
+  font-size: 2em;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
 }
 
-.picture{
-  background-image: url(../assets/img/section2.png);
-  width: 100%;
-  height: 38vw;
+.tecsup-section {
+  background-color: #a9cce3;
+  padding: 30px;
+  border-radius: 10px;
 }
-.picture {
-  display: flex;
-  flex-direction: row; /* Apila los elementos verticalmente */
-  justify-content: center; /* Centra verticalmente */
-  align-items: center; /* Centra horizontalmente */
-  border: 1px solid black; /* Solo para visualización */
+
+.tecsup-logo {
+  width: 150px;
+  height: auto;
 }
-.picture p{
-  margin: 11vw;
-  padding: 1vw 4vw;
-  border-radius: 8px;
-  font-size: 2rem;
+
+.options-section {
+  background-image: url("../assets/img/section2.png");
+  padding: 30px;
+  height: 70vh;
+  border-radius: 10px;
 }
-.student{
-  background-color: #FF0404;
-}
-.teacher{
-  background-color: #19ABCB;
+
+.btn-danger, .btn-primary {
+  position: relative;
+  top: 10vw;
+  width: 200px;
+  height: 60px;
+  font-size: 1.2em;
 }
