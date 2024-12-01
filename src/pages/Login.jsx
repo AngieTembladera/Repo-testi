@@ -7,15 +7,14 @@ export function Login() {
     <div className="login-container">
       <div className="image-section">
       <img
-            src={require("../assets/img/authentication-5 1.png")}
+            src={require("../assets/img/pexels-onbab-20475780.jpg")}
             alt=""
           ></img>
       </div>
 
       <div className="form-section">
         <div className="logo">
-          <img src="..../asset" alt="Caserito Logo" /> {}
-          <h2>CASERITO</h2>
+        <img src={require("../assets/img/LOGO (1).png")} alt="" />
         </div>
 
         <form className="login-form">

@@ -1,91 +1,32 @@
-/* Estilos básicos para el layout */
 .main-container {
-  font-family: 'Arial', sans-serif;
-  padding: 0;
+  background-color: #f5f5f5; /* Color de fondo general */
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background-color: #f5f5f5;
+.box {
+  background-color: #ffffff; /* Fondo blanco para las cajas */
+  border-radius: 8px; /* Bordes redondeados */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar las cajas */
+  margin-bottom: 20px; /* Espacio entre las cajas */
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: #2d3e50;
+.hero-section {
+  margin-bottom: 40px; /* Espacio entre el hero y el siguiente contenido */
 }
 
-.content-container {
-  margin-top: 20px;
-  display: flex;
+.card {
+  background-color: #e0e0e0; /* Fondo gris claro */
+  height: 150px; /* Altura fija */
+  border: none; /* Sin bordes */
+  border-radius: 8px;
 }
 
-.form-section {
-  padding: 20px;
-  background-color: #f8f9fa;
+@media (min-width: 768px) {
+  .card {
+    height: 200px; /* Ajuste de altura en pantallas más grandes */
+  }
 }
 
-.form-section h2 {
-  margin-bottom: 20px;
-}
-
-.register-form .form-group {
-  margin-bottom: 15px;
-}
-
-.register-form .form-control {
-  border-radius: 5px;
-}
-
-.info-section {
-  padding: 20px;
-  background: #A5CFBB;
-}
-
-.info-section h2 {
-  margin-bottom: 20px;
-}
-
-.info-list {
-  list-style: none;
-  padding: 0;
-}
-
-.info-list li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.info-list .icon-placeholder {
-  width: 20px;
-  height: 20px;
-  background-color: #c4c4c4;
-  margin-right: 10px;
-}
-
-.footer {
-  display: flex;
-  justify-content:space-evenly;
-  padding: 20px;
-  background-color: #83b09B;
-  font-size: 14px;
-}
-
-.footer-links, .footer-legal {
-  display: flex;
-  flex-direction: column;
-}
-
-.footer-links a, .footer-legal a {
-  text-decoration: none;
-  color: #2d3e50;
-  margin-bottom: 10px;
-}
-
-.footer-links a:hover, .footer-legal a:hover {
-  text-decoration: underline;
+.join-section .box {
+  max-width: 800px;
+  margin: 0 auto;
 }

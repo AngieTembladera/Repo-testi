@@ -1,0 +1,26 @@
+.footer {
+  color: #000;
+}
+
+.footer-link {
+  color: #000;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
+}
+
+.footer-icon {
+  color: #000;
+  transition: color 0.3s ease;
+}
+
+.footer-icon:hover {
+  color: #555;
+}
+
+.footer-line {
+  margin-top: 20px;
+}

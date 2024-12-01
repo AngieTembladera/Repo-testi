@@ -1,74 +1,99 @@
-import React, { useRef, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import "../styles/Home.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import '../styles/Home.css'; // Archivo CSS para estilos personalizados
+import { Footer } from "../components/navegador1/Footer/Footer";
+import { Navbar1 } from "../components/navegador1/Navbar1";
 
 export function Home() {
   return (
-    <div className="container-fluid main-container">
-      <header className="header">
-        <div className="logo">
-        <img src={require("../assets/img/LOGO (1).png")} alt="" />
-        </div>
-        
-        <div className="header-right"></div>
-      </header>
-
-      <div className="row content-container">
-        {/* Formulario de Registro */}
-        <div className="col-md-6 form-section">
-          <h2>Atrae y gestiona nuevos clientes a tu restaurante</h2>
-          <p>
-            ¿Deseas aumentar los ingresos de tu restaurante y optimizar tu actividad? Comienza a recibir nuevas reservas de comensales locales y de todas partes del mundo.
-          </p>
-          <p>¡Tu restaurante forma parte de un grupo o quieres registrar a varios restaurantes al mismo tiempo? Haz clic aquí.</p>
-          
-          <form className="register-form">
-            <div className="form-group">
-              <label htmlFor="nombre">Nombre</label>
-              <input type="text" className="form-control" id="nombre" placeholder="Nombre" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="apellido">Apellido</label>
-              <input type="text" className="form-control" id="apellido" placeholder="Apellido" />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input type="email" className="form-control" id="email" placeholder="Email" />
-            </div>
-            <div className="form-group">
-              <p>¿Ya tienes una cuenta en Caserito? <a href="/">Inicia sesión</a></p>
-            </div>
-            <button type="submit" className="btn btn-primary">Regístrate</button>
-          </form>
-        </div>
-
-        {/* Información del lado derecho */}
-        <div className="col-md-6 info-section verde">
-          <h2>¿Qué puedes esperar de Caserito?</h2>
-          <ul className="info-list">
-            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
-          </ul>
+    <div className="main-container">
+      <Navbar1></Navbar1>
+      {/* Sección de búsqueda */}
+      <div className="hero-section py-5" style={{ backgroundColor: "#cce8d8" }}>
+        <div className="container text-center">
+          <h1>Descubre el mejor Restaurante de tu zona</h1>
+          <div className="input-group mt-4 w-50 mx-auto">
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Buscar restaurante"
+              aria-label="Buscar restaurante"
+            />
+            <button className="btn btn-success" type="button">
+              Búsqueda
+            </button>
+          </div>
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="footer">
-        <div className="footer-links">
-          <a href="/">¿Quiénes somos?</a>
-          <a href="/">Información de contacto</a>
-          <a href="/">¿Tienes preguntas?</a>
-          <a href="/">Trabaja con nosotros</a>
+      {/* Sección de destacados */}
+      <div className="container mt-5">
+        <div className="box mb-4 p-4">
+          <h2>Seleccionados para ti</h2>
+          <div className="row mt-4">
+            {/* Cards de destacados */}
+            <div className="col-6 col-md-3 mb-4">
+              <div className="card h-100"></div>
+            </div>
+            <div className="col-6 col-md-3 mb-4">
+              <div className="card h-100"></div>
+            </div>
+            <div className="col-6 col-md-3 mb-4">
+              <div className="card h-100"></div>
+            </div>
+            <div className="col-6 col-md-3 mb-4">
+              <div className="card h-100"></div>
+            </div>
+          </div>
         </div>
-        <div className="footer-legal">
-          <a href="/">Legal</a>
-          <a href="/">Términos y Condiciones (Usuarios)</a>
-          <a href="/">Términos y Condiciones (Negocios)</a>
-          <a href="/">Política de privacidad</a>
+      </div>
+
+      {/* Sección de restaurantes populares */}
+      <div className="container mt-5">
+        <div className="box mb-4 p-4">
+          <h2>Restaurantes populares</h2>
+          <div className="row mt-4">
+            {/* Cards de populares */}
+            <div className="col-6 col-md-4 mb-4">
+              <div className="card h-100"></div>
+            </div>
+            <div className="col-6 col-md-4 mb-4">
+              <div className="card h-100"></div>
+            </div>
+            <div className="col-6 col-md-4 mb-4">
+              <div className="card h-100"></div>
+            </div>
+          </div>
         </div>
-      </footer>
+      </div>
+
+      {/* Sección de acerca de */}
+      <div className="container mt-5">
+        <div className="box mb-4 p-4">
+          <h2>Acerca de Caserita</h2>
+          <p className="mt-4">
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book.
+          </p>
+          <p>
+            It has survived not only five centuries, but also the leap into
+            electronic typesetting, remaining essentially unchanged.
+          </p>
+        </div>
+      </div>
+
+      {/* Sección de unirse */}
+      <div className="join-section text-center py-5 mt-5" style={{ backgroundColor: "#cce8d8" }}>
+        
+          <h2>ÚNETE A CASERITA</h2>
+          <p>COME, AHORRA Y DISFRUTA</p>
+          <div className="d-flex justify-content-center mt-4">
+            <button className="btn btn-outline-success me-3">Opción 1</button>
+            <button className="btn btn-outline-success">Opción 2</button>
+        </div>
+      </div>
+      <Footer></Footer>
     </div>
   );
 }
