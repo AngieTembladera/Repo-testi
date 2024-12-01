@@ -1,78 +1,74 @@
 import React, { useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { Navbar1 } from "../components/navegador1/Navbar1";
 import "../styles/Home.css";
 
 export function Home() {
-  // esta es la logica de los botones para que al presionarlos te envie primero a las opciones pero que el boton ya se dirija a lo que eligiste ya sea iniciar sesión o registrarse
-  const [mode, setMode] = useState(null);
-  const navigate = useNavigate();
-  const buttonSectionRef = useRef(null);
-
-  const handleModeChange = (selectedMode) => {
-    setMode(selectedMode);
-    buttonSectionRef.current.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleRoleSelection = (role) => {
-    if (mode === 'login') {
-      navigate('/login');
-    } else if (mode === 'register') {
-      navigate('/register');
-    }
-  };
-
   return (
-    <div>
-      <Navbar1 onModeChange={handleModeChange} />
-      {/* Aquí va el contenido */}
-      <div className="container-fluid p-0">
-        {/* Banner Section */}
-        <div className="banner-section">
-          <img src={require("../assets/img/tecsup.png")} className="img-fluid" alt="Banner" />
-          <div className="banner-text">
-            <h1>Bienvenido a nuestra plataforma de aprendizaje por alumnos para alumnos</h1>
-          </div>
+    <div className="container-fluid main-container">
+      <header className="header">
+        <div className="logo">
+        <img src={require("../assets/img/LOGO (1).png")} alt="" />
+        </div>
+        
+        <div className="header-right"></div>
+      </header>
+
+      <div className="row content-container">
+        {/* Formulario de Registro */}
+        <div className="col-md-6 form-section">
+          <h2>Atrae y gestiona nuevos clientes a tu restaurante</h2>
+          <p>
+            ¿Deseas aumentar los ingresos de tu restaurante y optimizar tu actividad? Comienza a recibir nuevas reservas de comensales locales y de todas partes del mundo.
+          </p>
+          <p>¡Tu restaurante forma parte de un grupo o quieres registrar a varios restaurantes al mismo tiempo? Haz clic aquí.</p>
+          
+          <form className="register-form">
+            <div className="form-group">
+              <label htmlFor="nombre">Nombre</label>
+              <input type="text" className="form-control" id="nombre" placeholder="Nombre" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="apellido">Apellido</label>
+              <input type="text" className="form-control" id="apellido" placeholder="Apellido" />
+            </div>
+            <div className="form-group">
+              <label htmlFor="email">Email</label>
+              <input type="email" className="form-control" id="email" placeholder="Email" />
+            </div>
+            <div className="form-group">
+              <p>¿Ya tienes una cuenta en Caserito? <a href="/">Inicia sesión</a></p>
+            </div>
+            <button type="submit" className="btn btn-primary">Regístrate</button>
+          </form>
         </div>
 
-        {/* Tecsup Section */}
-        <div className="tecsup-section text-center my-5">
-          <p>Comparte y reafirma las bases de tu conocimiento adquirido, demostrando tus habilidades.</p>
-          <img src={require("../assets/img/image 21.png")} alt="Tecsup Logo" className="tecsup-logo" />
-        </div>
-
-        {/* Options Section */}
-        <div className="options-section text-center my-5" ref={buttonSectionRef}>
-          {mode ? (
-            <div className="row">
-              <div className="col-md-6">
-                <button className="btn btn-danger btn-lg" onClick={() => handleRoleSelection('student')}>
-                  ALUMNO
-                </button>
-              </div>
-              <div className="col-md-6">
-                <button className="btn btn-primary btn-lg" onClick={() => handleRoleSelection('teacher')}>
-                  PROFESOR
-                </button>
-              </div>
-            </div>
-          ) : (
-            <div className="row">
-              <div className="col-md-6">
-                <button className="btn btn-danger btn-lg" onClick={() => handleModeChange('register')}>
-                  ESTUDIANTES
-                </button>
-              </div>
-              <div className="col-md-6">
-                <button className="btn btn-primary btn-lg" onClick={() => handleModeChange('register')}>
-                  PROFESORES
-                </button>
-              </div>
-            </div>
-          )}
+        {/* Información del lado derecho */}
+        <div className="col-md-6 info-section verde">
+          <h2>¿Qué puedes esperar de Caserito?</h2>
+          <ul className="info-list">
+            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+            <li><i className="icon-placeholder"></i>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+          </ul>
         </div>
       </div>
-      {/* Aquí termina */}
+
+      {/* Footer */}
+      <footer className="footer">
+        <div className="footer-links">
+          <a href="/">¿Quiénes somos?</a>
+          <a href="/">Información de contacto</a>
+          <a href="/">¿Tienes preguntas?</a>
+          <a href="/">Trabaja con nosotros</a>
+        </div>
+        <div className="footer-legal">
+          <a href="/">Legal</a>
+          <a href="/">Términos y Condiciones (Usuarios)</a>
+          <a href="/">Términos y Condiciones (Negocios)</a>
+          <a href="/">Política de privacidad</a>
+        </div>
+      </footer>
     </div>
   );
 }

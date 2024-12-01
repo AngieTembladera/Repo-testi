@@ -1,70 +1,59 @@
-import { Navbar2 } from "../components/navegador2/Navbar2";
-import { Link, useNavigate } from "react-router-dom";
-import { useState } from 'react';
-import "../styles/Login.css";
-import axios from 'axios';
+import React from 'react';
+import '../styles/Login.css'; // Importa tus estilos personalizados
+import googleLogo from '../assets/img/google.png';
 
 export function Login() {
-
-  const navigate = useNavigate();
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-
-  const login = async (event) => {
-    event.preventDefault();
-    try {
-        const response = await axios.post('http://localhost:8080/login', {
-            email: email,
-            password: password
-        });
-        const token = response.data.token;
-        setError('');
-        // Aquí podrías guardar el token en el local storage o en un contexto global
-        localStorage.setItem('authToken', token);
-        // Redirige al usuario a otra página, por ejemplo, el dashboard
-        navigate('/home');
-    } catch (err) {
-        setError('Invalid email or password');
-    }
-};
-
   return (
-    <div>
-      <Navbar2 />
-      <div className="Cajas">
-        <div className="photo">
-          <img
+    <div className="login-container">
+      <div className="image-section">
+      <img
             src={require("../assets/img/authentication-5 1.png")}
             alt=""
           ></img>
-        </div>
-          {/* ---------------------- */}
-        <div class="Datos">
-          <form onSubmit={login}>
-            
-          <div class="fila">
-            <span>Correo:</span>
-            <input type="email" id="email" name="email" required value={email} onChange={(e)=>setEmail(e.target.value)} />
-          </div>
-          <div class="fila">
-            <span>Contraseña:</span>
-            <input type="password" id="password" name="password" required value={password} onChange={(e)=>setPassword(e.target.value)} />
-          </div>
-          <div class="fila extra">
-            <p><img className="Google"
-            src={require("../assets/img/google.png")}
-            alt=""
-          ></img>Continuar con Google</p>
-            <p>Olvidé mi contraseña</p>
-          </div>
-          {error & <p style={{color: 'red'}}>{error}</p>}
-            <button type="submit" class="click"><a href="/home">Ingresar</a></button>
-          </form>
+      </div>
+
+      <div className="form-section">
+        <div className="logo">
+          <img src="..../asset" alt="Caserito Logo" /> {}
+          <h2>CASERITO</h2>
         </div>
 
-        {/* --------------------------------- */}
+        <form className="login-form">
+          <div className="form-group">
+            <label htmlFor="username">Nombre de Usuario o Dirección de correo electrónico</label>
+            <input
+              type="text"
+              className="form-control"
+              id="username"
+              placeholder="Nombre de usuario"
+            />
+          </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Contraseña</label>
+            <input
+              type="password"
+              className="form-control"
+              id="password"
+              placeholder="Contraseña"
+            />
+          </div>
+
+          <div className="form-group forgot-password">
+            <a href="/">¿Has olvidado tu contraseña?</a>
+          </div>
+
+          <button type="submit" className="btn btn-primary btn-block">
+            Iniciar Sesión
+          </button>
+
+          <div className="register-link">
+            ¿Aún no eres miembro? <a href="/">Regístrate ahora</a>
+          </div>
+        </form>
       </div>
     </div>
   );
 }
+
+export default Login;

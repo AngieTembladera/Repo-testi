@@ -1,58 +1,91 @@
-body {
-  font-family: Arial, sans-serif;
-  background-color: #eaf2f8;
+/* Estilos básicos para el layout */
+.main-container {
+  font-family: 'Arial', sans-serif;
+  padding: 0;
 }
 
-.banner-section {
-  margin-top: 5vh;
-  position: relative;
+.header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #f5f5f5;
 }
 
-.banner-section img {
-  width: 60%;
-  height: 70vh;
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2d3e50;
 }
 
-.banner-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000;
+.content-container {
+  margin-top: 20px;
+  display: flex;
 }
 
-.banner-text h1 {
-  font-size: 2em;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 10px;
+.form-section {
+  padding: 20px;
+  background-color: #f8f9fa;
 }
 
-.tecsup-section {
-  background-color: #a9cce3;
-  padding: 30px;
-  border-radius: 10px;
+.form-section h2 {
+  margin-bottom: 20px;
 }
 
-.tecsup-logo {
-  width: 150px;
-  height: auto;
+.register-form .form-group {
+  margin-bottom: 15px;
 }
 
-.options-section {
-  background-image: url("../assets/img/section2.png");
-  padding: 30px;
-  height: 70vh;
-  border-radius: 10px;
+.register-form .form-control {
+  border-radius: 5px;
 }
 
-.btn-danger, .btn-primary {
-  position: relative;
-  top: 10vw;
-  width: 200px;
-  height: 60px;
-  font-size: 1.2em;
+.info-section {
+  padding: 20px;
+  background: #A5CFBB;
+}
+
+.info-section h2 {
+  margin-bottom: 20px;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+}
+
+.info-list li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info-list .icon-placeholder {
+  width: 20px;
+  height: 20px;
+  background-color: #c4c4c4;
+  margin-right: 10px;
+}
+
+.footer {
+  display: flex;
+  justify-content:space-evenly;
+  padding: 20px;
+  background-color: #83b09B;
+  font-size: 14px;
+}
+
+.footer-links, .footer-legal {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links a, .footer-legal a {
+  text-decoration: none;
+  color: #2d3e50;
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover, .footer-legal a:hover {
+  text-decoration: underline;
 }
